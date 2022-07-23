@@ -149,7 +149,7 @@ nnoremap <silent> <Plug>(RepeatUndoLine) :<C-U>call repeat#wrap('U',v:count)<CR>
 nnoremap <silent> <Plug>(RepeatRedo)     :<C-U>call repeat#wrap("\<Lt>C-R>",v:count)<CR>
 
 if !hasmapto('<Plug>(RepeatDot)', 'n')
-    nmap . <Plug>(RepeatDot)
+    nmap s <Plug>(RepeatDot)
 endif
 if !hasmapto('<Plug>(RepeatUndo)', 'n')
     nmap u <Plug>(RepeatUndo)
