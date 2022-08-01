@@ -1,8 +1,6 @@
 " repeat.vim - Let the repeat command repeat plugin maps
 " Maintainer:   mkoloni
 
-nmap s .
-
 if exists("g:loaded_repeat") || &cp || v:version < 700
     finish
 endif
