@@ -1,48 +1,7 @@
 " repeat.vim - Let the repeat command repeat plugin maps
-" Maintainer:   Tim Pope
-" Version:      1.2
-" GetLatestVimScripts: 2136 1 :AutoInstall: repeat.vim
+" Maintainer:   mkoloni
 
-" Installation:
-" Place in either ~/.vim/plugin/repeat.vim (to load at start up) or
-" ~/.vim/autoload/repeat.vim (to load automatically as needed).
-"
-" License:
-" Copyright (c) Tim Pope.  Distributed under the same terms as Vim itself.
-" See :help license
-"
-" Developers:
-" Basic usage is as follows:
-"
-"   silent! call repeat#set("\<Plug>MappingToRepeatCommand",3)
-"
-" The first argument is the mapping that will be invoked when the |.| key is
-" pressed.  Typically, it will be the same as the mapping the user invoked.
-" This sequence will be stuffed into the input queue literally.  Thus you must
-" encode special keys by prefixing them with a backslash inside double quotes.
-"
-" The second argument is the default count.  This is the number that will be
-" prefixed to the mapping if no explicit numeric argument was given.  The
-" value of the v:count variable is usually correct and it will be used if the
-" second parameter is omitted.  If your mapping doesn't accept a numeric
-" argument and you never want to receive one, pass a value of -1.
-"
-" Make sure to call the repeat#set function _after_ making changes to the
-" file.
-"
-" For mappings that use a register and want the same register used on
-" repetition, use:
-"
-"   silent! call repeat#setreg("\<Plug>MappingToRepeatCommand", v:register)
-"
-" This function can (and probably needs to be) called before making changes to
-" the file (as those typically clear v:register).  Therefore, the call sequence
-" in your mapping will look like this:
-"
-"   nnoremap <silent> <Plug>MyMap
-"   \   :<C-U>execute 'silent! call repeat#setreg("\<lt>Plug>MyMap", v:register)'<Bar>
-"   \   call <SID>MyFunction(v:register, ...)<Bar>
-"   \   silent! call repeat#set("\<lt>Plug>MyMap")<CR>
+nmap s .
 
 if exists("g:loaded_repeat") || &cp || v:version < 700
     finish
